@@ -1,0 +1,8 @@
+For Amajae to do:
+
+1. Create unity project with agreed upon unity version
+2. Put unity project innards into Rock-Lobster
+3. Push changes
+
+4. Remove old project from unity hub
+5. Add unity project back in from the repository
