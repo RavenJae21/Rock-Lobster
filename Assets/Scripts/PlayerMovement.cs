@@ -5,12 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
    //Set the movement speed in unity
     public float moveSpeed = 10f;
-//Set how high I can jump in unity
-    public float velocity = 1f;
     public float forceStrength = 1f;
     private Rigidbody rb;
-//True or false statement 
-    public bool isGrounded = true;
 
     void Start()
     {
@@ -24,12 +20,6 @@ public class PlayerMovement : MonoBehaviour
         {
             ReloadLevel();
         } 
-//It calls on the ground tag so it can jump again
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-        
         if(collision.gameObject.CompareTag("Finish"))
         {
             LoadNextScene();
@@ -40,15 +30,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MovePlayer();
-//Space bar is the key to jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.linearVelocity = Vector3.up * velocity;
-            rb.AddForce(Vector3.up * velocity, ForceMode.Impulse);
-            rb.AddForce(Vector3.down * forceStrength, ForceMode.Impulse);
-// Set to false immediately after jumping
-            isGrounded = false;
-        }
     }
 
 //Player movement for left and right
