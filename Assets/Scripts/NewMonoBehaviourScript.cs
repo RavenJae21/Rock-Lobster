@@ -1,13 +1,11 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class NewMonoBehaviourScript : MonoBehaviour
 {
-    public int currentHealth;
-    public int maxHealth = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth; 
+        
     }
 
     // Update is called once per frame
