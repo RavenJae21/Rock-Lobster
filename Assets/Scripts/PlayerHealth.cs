@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
 //Start of with whatever maxHealth is
-        maxHealth = currentHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
