@@ -10,9 +10,13 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth; 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int amount)
     {
-        
+        currentHealth -= amount;
+
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
