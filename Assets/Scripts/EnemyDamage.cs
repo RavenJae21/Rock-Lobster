@@ -9,7 +9,6 @@ public class EnemyDamage : MonoBehaviour
         // Check if we hit an enemy
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hey you hit me!");
             // Get a reference to the enemy's health script
             PlayerHealth enemyHealth = collision.gameObject.GetComponent<PlayerHealth>();
 

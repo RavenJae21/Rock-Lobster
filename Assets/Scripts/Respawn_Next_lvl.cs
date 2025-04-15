@@ -8,13 +8,18 @@ public class Respawn_Next_lvl : MonoBehaviour
     {
 //It calls on the respawn tag and reloads the level
         if(collision.gameObject.CompareTag("Player")) 
-        {
+        {            
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            ReloadLevel();
+
+            if(gameObject == null)
+            {
+                playerHealth.PlayerDeath();
+                PlayAgain();
+            }
         } 
-        if(collision.gameObject.CompareTag("Enemy"))
+        //if(collision.gameObject.CompareTag("Enemy"))
         {
-            LoadNextScene();
+            //LoadNextScene();
         }
     }
 
