@@ -11,9 +11,18 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayerTakeDamage(int amount)
     {
-        
+        currentHealth -= amount;
+
+        if(currentHealth <= 0)
+        {
+            PlayerDeath();
+        }
+    }
+
+    public void PlayerDeath()
+    {
+        Destroy(gameObject);
     }
 }

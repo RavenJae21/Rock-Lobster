@@ -11,12 +11,12 @@ public class EnemyDamage : MonoBehaviour
         {
             Debug.Log("Hey you hit me!");
             // Get a reference to the enemy's health script
-            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+            PlayerHealth enemyHealth = collision.gameObject.GetComponent<PlayerHealth>();
 
             // Call the enemy's TakeDamage method
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(attackDamage);
+                enemyHealth.PlayerTakeDamage(attackDamage);
             }
         }
     }
