@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Combine Scene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Aria - UI Screens/Start Screen - Aria.unity
+    guid: 2a6519df13c3c07448282396bc8e0237
+  - enabled: 1
+    path: Assets/Scenes/Matthew's Scene.unity
+    guid: f6b8eaf7e7acd264cb167a92dd1e438c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 69ff1e8163c55ca4a977ff027bc350cd, type: 3}
   m_UseUCBPForAssetBundles: 0
