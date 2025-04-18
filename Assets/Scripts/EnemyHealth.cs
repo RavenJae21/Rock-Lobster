@@ -15,14 +15,16 @@ public class EnemyHealth : MonoBehaviour
 
     public void EnemyTakeDamage(int amount)
     {
+//Amount will substract current health
         currentHealth -= amount;
-
+//If current health is equal to or less than zero call enemy death
         if(currentHealth <= 0)
         {
             EnemyDeath();
         }
     }
 
+//What happens when enemy loses all their health
     public void EnemyDeath()
     {
         Destroy(gameObject);

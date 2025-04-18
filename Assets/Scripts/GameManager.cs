@@ -1,15 +1,16 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameObject startCanvas;
+//Assign in Inspector
     public GameObject loseCanvas;
     public GameObject levelUpCanvas;
     public GameObject winCanvas;
 
-    //public bool start = false;
+//Bool's that will check if true or false
     public bool lose = false;
     public bool levelUp = false;
     public bool win = false;
@@ -17,8 +18,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
-        //startCanvas.SetActive(true);
+//Want everything to be false since nothing has happened yet
         loseCanvas.SetActive(false);
         levelUpCanvas.SetActive(false);
         winCanvas.SetActive(false);
@@ -26,7 +26,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
-        
+//Call Playerhealth script
+        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+
+        if(playerHealth != null && playerHealth.isDead)
+        {
+            loseCanvas.SetActive(true);
+            playerHealth.PlayerDeath();
+        }
     }
 }

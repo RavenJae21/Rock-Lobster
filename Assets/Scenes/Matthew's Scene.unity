@@ -202,8 +202,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 539125872390558996, guid: 8f536d9c65bfce044b5969ebfe188a1f, type: 3}
+      propertyPath: attackDamage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450545340813837553, guid: 8f536d9c65bfce044b5969ebfe188a1f, type: 3}
       propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885542521518285823, guid: 8f536d9c65bfce044b5969ebfe188a1f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066495231898349063, guid: 8f536d9c65bfce044b5969ebfe188a1f, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7066495231898349063, guid: 8f536d9c65bfce044b5969ebfe188a1f, type: 3}
@@ -3018,6 +3030,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3122528569881198923, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+      propertyPath: attackDamage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9072115026933000995, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
       propertyPath: detectionRadius
       value: 150.1
@@ -3027,11 +3043,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
---- !u!1 &1526676793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9158765018643212202, guid: 45ea15ae2c0661b4d815a4a2182b5a0e, type: 3}
-  m_PrefabInstance: {fileID: 1386733317278222627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1544358088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,10 +4760,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a5aff4a978ca64aa5cd6e874779bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCanvas: {fileID: 1526676793}
   loseCanvas: {fileID: 1439251983}
   levelUpCanvas: {fileID: 346568525}
   winCanvas: {fileID: 492769723}
+  lose: 0
+  levelUp: 0
+  win: 0
 --- !u!4 &2135857946
 Transform:
   m_ObjectHideFlags: 0
