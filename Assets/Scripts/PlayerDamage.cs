@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
+    public Animator lobsterWalk;
+
     public int attackDamage = 20; // Damage value
+
+    void Start()
+    {
+        lobsterWalk = GetComponent<Animator>();
+    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -17,6 +24,14 @@ public class PlayerDamage : MonoBehaviour
             {
                 enemyHealth.EnemyTakeDamage(attackDamage);
             }
+        }
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            lobsterWalk.SetTrigger("Walk");
         }
     }
 }
