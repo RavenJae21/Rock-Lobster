@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 5597069326731818067}
   - component: {fileID: 4915602154583690822}
   m_Layer: 5
-  m_Name: Gladiator
+  m_Name: MainMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

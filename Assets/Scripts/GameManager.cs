@@ -2,18 +2,20 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //public static GameManager instance;
 //Assign in Inspector
     public GameObject loseCanvas;
     public GameObject levelUpCanvas;
     public GameObject winCanvas;
 
 //Bool's that will check if true or false
-    public bool lose = false;
-    public bool levelUp = false;
-    public bool win = false;
+    public bool playerWin = false;
+    public bool enemyWin = false;
+    public bool gameIsOver = false;
 
 
     void Start()
@@ -22,17 +24,62 @@ public class GameManager : MonoBehaviour
         loseCanvas.SetActive(false);
         levelUpCanvas.SetActive(false);
         winCanvas.SetActive(false);
+
     }
 
     void Update()
     {
-//Call Playerhealth script
-        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
-
-        if(playerHealth != null && playerHealth.isDead)
+        if(gameIsOver)
         {
-            loseCanvas.SetActive(true);
-            playerHealth.PlayerDeath();
+//If statement will check and see if enemy is dead then show level up canvas
+            if(playerWin)
+            {
+                levelUpCanvas.SetActive(true);
+
+            }
+//If statement will check and see if player is dead then show lose canvas
+            if(enemyWin)
+            {
+                loseCanvas.SetActive(true);
+
+            }
         }
+    }
+
+    public void SetWinState(bool didWin)
+    {
+        if(!gameIsOver)
+        {
+            if(didWin)
+            {
+                playerWin = true;
+                gameIsOver = true;
+            }
+            else
+            {
+                enemyWin = true;
+                gameIsOver = true;
+            }
+        }
+    }
+
+    //Loads the next level
+    public void LoadNextScene()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = currentScene +1;
+        if (nextScene == SceneManager.sceneCountInBuildSettings)
+            {
+                nextScene = 0;
+            }
+            
+        SceneManager.LoadScene(nextScene);
+    }
+
+//Reloads the level
+    public void ReloadLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
     }
 }

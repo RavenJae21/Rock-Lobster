@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Matthew's Scene.unity
     guid: f6b8eaf7e7acd264cb167a92dd1e438c
+  - enabled: 1
+    path: Assets/Scenes/Fish Tank.unity
+    guid: 367db55ff1de7774790c6b0d7cbd1d0c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 69ff1e8163c55ca4a977ff027bc350cd, type: 3}
   m_UseUCBPForAssetBundles: 0

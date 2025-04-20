@@ -6,7 +6,9 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
 //Shows your maximum health
     public int maxHealth = 100;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public GameManager gameManager;
+
     void Start()
     {
 //You will start at 100 health
@@ -17,9 +19,11 @@ public class EnemyHealth : MonoBehaviour
     {
 //Amount will substract current health
         currentHealth -= amount;
+
 //If current health is equal to or less than zero call enemy death
         if(currentHealth <= 0)
         {
+            gameManager.SetWinState(true);
             EnemyDeath();
         }
     }
@@ -27,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
 //What happens when enemy loses all their health
     public void EnemyDeath()
     {
-        Destroy(gameObject);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
     }
 }

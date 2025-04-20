@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 100;
 
-    public bool isDead = false;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -19,9 +19,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
 
 //If current health is less or equal to zero call PlayerDeath()
-        if(currentHealth <= 0 && !isDead)
+        if(currentHealth <= 0)
         {
-            isDead = true;
+            gameManager.SetWinState(false);
             PlayerDeath();
         }
     }
