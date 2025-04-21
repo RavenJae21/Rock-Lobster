@@ -2,28 +2,33 @@ using UnityEngine;
 
 public class StatScript : MonoBehaviour
 {
-    //Player Stats
+    [Header("Player Stats")]
     public int playerHealth;
     public int playerDamage;
     public int playerSpeed;
 
-    //Enemy Stats
+
+    [Header("Enemy Stats")]
      public int enemyHealth;
     public int enemyDamage;
     public int enemySpeed;
 
-    //Other
-    public bool didWeWin;
-    
-    
 
-    //if player wins -> add to player stats & add to enemy stats
-    //if player loses -> reset player & enemy stats
+    [Header("Other Variables")]
+    public int totalWins;
+    public bool weWon;
+    public bool weLost;
+    public bool LevelCompleted;
+    public KeyCode LCToggle;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        didWeWin = false;
+        totalWins = 0;
+        weWon = false;
+        weLost = true;
+        LevelCompleted = false;
+        LCToggle = KeyCode.Space;
 
         playerHealth = 50;
         playerDamage = 50;
@@ -39,35 +44,64 @@ public class StatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Stats();
+        if(Input.GetKey(LCToggle))
+        {
+            LevelCompleted = true;
+            Debug.Log("Level Completed!");
+        }
+
+        if (LevelCompleted == true)
+        {
+            Debug.Log("Calling Stats Script");
+            Stats();
+        }
     }
 
     void Stats()
     {
-        if (didWeWin == true)
+        if (playerHealth <= 0)
         {
-            //add to player stats
-            playerHealth += 10;
-            playerDamage += 10;
-            playerSpeed += 10;
+            Debug.Log("Player Lost: We must now Reset"); 
+            weLost = true;
+            LevelCompleted = false;
+            Reset();
 
-            //add to enemy stats
-            enemyHealth += 10;
-            enemyDamage += 10;
-            enemySpeed += 10;
         }
-        else if (didWeWin == false)
-        {
-            //reset player stats
-            playerHealth = 50;
-            playerDamage = 50;
-            playerSpeed = 50;
+        else if (playerHealth > 0) && (enemyHealth <= 0)
+        (
+            Debug.Log("Player Won: We must now Upgrade our stats");
+            weWon = true; 
+            LevelCompleted = false;
+            Upgrade();
+        )
 
-            //reset enemy stats
-            enemyHealth = 50;
-            enemyDamage = 50;
-            enemySpeed = 50;
-        }
     }
 
+    void Reset()
+    {
+        Debug.Log("Reseting Stats...");
+        //reset player stats
+        playerHealth = 50;
+        playerDamage = 50;
+        playerSpeed = 50;
+
+        //reset enemy stats
+        enemyHealth = 50;
+        enemyDamage = 50;
+        enemySpeed = 50; ;
+    }
+
+    void Upgrade()
+    {
+        Debug.Log("Upgrading Stats...");
+        //add to player stats
+        playerHealth += 10;
+        playerDamage += 10;
+        playerSpeed += 10;
+
+        //add to enemy stats
+        enemyHealth += 10;
+        enemyDamage += 10;
+        enemySpeed += 10;
+    }
 }
