@@ -44,7 +44,7 @@ public class StatScript : MonoBehaviour
 
     void Stats()
     {
-        if didWeWin == true
+        if (didWeWin == true)
         {
             //add to player stats
             playerHealth += 10;
@@ -56,7 +56,7 @@ public class StatScript : MonoBehaviour
             enemyDamage += 10;
             enemySpeed += 10;
         }
-        else if didWeWin == false
+        else if (didWeWin == false)
         {
             //reset player stats
             playerHealth = 50;
