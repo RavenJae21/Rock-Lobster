@@ -18,8 +18,9 @@ public class StatScript : MonoBehaviour
     public int totalWins;
     public bool weWon;
     public bool weLost;
-    public bool LevelCompleted;
-    public KeyCode LCToggle;
+    public bool LevelEnded;
+    public KeyCode LCToggle = KeyCode.Space;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +28,7 @@ public class StatScript : MonoBehaviour
         totalWins = 0;
         weWon = false;
         weLost = true;
-        LevelCompleted = false;
+        LevelEnded = false;
         LCToggle = KeyCode.Space;
 
         playerHealth = 50;
@@ -46,13 +47,13 @@ public class StatScript : MonoBehaviour
     {
         if(Input.GetKey(LCToggle))
         {
-            LevelCompleted = true;
+            LevelEnded = true;
             Debug.Log("Level Completed!");
         }
 
-        if (LevelCompleted == true)
+        if (LevelEnded == true)
         {
-            Debug.Log("Calling Stats Script");
+            Debug.Log("Calling Stats Function");
             Stats();
         }
     }
@@ -63,7 +64,9 @@ public class StatScript : MonoBehaviour
         {
             Debug.Log("Player Lost: We must now Reset"); 
             weLost = true;
-            LevelCompleted = false;
+            weWon = false;
+            totalWins = 0;
+            LevelEnded = false;
             Reset();
 
         }
@@ -71,8 +74,14 @@ public class StatScript : MonoBehaviour
         {
             Debug.Log("Player Won: We must now Upgrade our stats");
             weWon = true; 
-            LevelCompleted = false;
+            weLost = false;
+            totalWins ++;
+            LevelEnded = false;
             Upgrade();
+        }
+        else
+        {
+            Debug.Log("No change in stats");
         }
 
     }
@@ -95,13 +104,13 @@ public class StatScript : MonoBehaviour
     {
         Debug.Log("Upgrading Stats...");
         //add to player stats
-        playerHealth += 10;
-        playerDamage += 10;
-        playerSpeed += 10;
+        playerHealth = 50 + (totalWins * 10);
+        playerDamage = 50 + (totalWins * 10);
+        playerSpeed = 50 + (totalWins * 10);
 
         //add to enemy stats
-        enemyHealth += 10;
-        enemyDamage += 10;
-        enemySpeed += 10;
+        enemyHealth = 50 + (totalWins * 10);
+        enemyDamage = 50 + (totalWins * 10);
+        enemySpeed = 50 + (totalWins * 10);
     }
 }
