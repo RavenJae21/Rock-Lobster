@@ -67,13 +67,13 @@ public class StatScript : MonoBehaviour
             Reset();
 
         }
-        else if (playerHealth > 0) && (enemyHealth <= 0)
-        (
+        else if (playerHealth > 0 && enemyHealth <= 0)
+        {
             Debug.Log("Player Won: We must now Upgrade our stats");
             weWon = true; 
             LevelCompleted = false;
             Upgrade();
-        )
+        }
 
     }
 

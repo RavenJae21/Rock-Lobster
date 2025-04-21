@@ -1119,6 +1119,7 @@ GameObject:
   - component: {fileID: 1619578101}
   - component: {fileID: 1619578100}
   - component: {fileID: 1619578099}
+  - component: {fileID: 1619578102}
   m_Layer: 0
   m_Name: Test tube
   m_TagString: Untagged
@@ -1217,6 +1218,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619578097}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1619578102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619578097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e8d5dc7a3570c4daa33fdd9c19ae98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 0
+  playerDamage: 0
+  playerSpeed: 0
+  enemyHealth: 0
+  enemyDamage: 0
+  enemySpeed: 0
+  didWeWin: 0
 --- !u!1 &1703364194
 GameObject:
   m_ObjectHideFlags: 0
