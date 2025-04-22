@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
 public class StatScript : MonoBehaviour
 {
@@ -12,6 +15,15 @@ public class StatScript : MonoBehaviour
      public int enemyHealth;
     public int enemyDamage;
     public int enemySpeed;
+
+    [Header("TextMeshPro's")]
+    public TextMeshProUGUI player_HP;
+    public TextMeshProUGUI player_DP;
+    public TextMeshProUGUI player_S;
+    public TextMeshProUGUI enemy_HP;
+    public TextMeshProUGUI enemy_DP;
+    public TextMeshProUGUI enemy_S;
+    
 
 
     [Header("Other Variables")]
@@ -45,6 +57,13 @@ public class StatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player_HP.text = "" + playerHealth;
+        player_DP.text = "" + playerDamage;
+        player_S.text = "" + playerSpeed;
+        enemy_HP.text = "" + enemyHealth;
+        enemy_DP.text = "" + enemyDamage;
+        enemy_S.text = "" + enemySpeed;
+
         if(Input.GetKey(LCToggle))
         {
             LevelEnded = true;
@@ -55,6 +74,7 @@ public class StatScript : MonoBehaviour
         {
             Debug.Log("Calling Stats Function");
             Stats();
+            LevelEnded = false;
         }
     }
 
@@ -98,6 +118,16 @@ public class StatScript : MonoBehaviour
         enemyHealth = 50;
         enemyDamage = 50;
         enemySpeed = 50; ;
+
+        //ammoText.text = currentAmmo + " / " + maxAmmo;
+        //Changes UI Text 
+        /*player_HP.text = "" + playerHealth;
+        player_DP.text = "" + playerDamage;
+        player_S.text = "" + playerSpeed;
+        enemy_HP.text = "" + enemyHealth;
+        enemy_DP.text = "" + enemy_DP;
+        enemy_S.text = "" + enemySpeed;*/
+
     }
 
     void Upgrade()
@@ -112,5 +142,15 @@ public class StatScript : MonoBehaviour
         enemyHealth = 50 + (totalWins * 10);
         enemyDamage = 50 + (totalWins * 10);
         enemySpeed = 50 + (totalWins * 10);
+
+        //ammoText.text = currentAmmo + " / " + maxAmmo;
+        //Changes UI Text 
+        /*player_HP.text = "" + playerHealth;
+        player_DP.text = "" + playerDamage;
+        player_S.text = "" + playerSpeed;
+        enemy_HP.text = "" + enemyHealth;
+        enemy_DP.text = "" + enemy_DP;
+        enemy_S.text = "" + enemySpeed;*/
+
     }
 }
