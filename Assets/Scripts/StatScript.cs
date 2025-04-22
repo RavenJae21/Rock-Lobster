@@ -37,16 +37,17 @@ public class StatScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Variables used to determine how code should proceed
         totalWins = 0;
         weWon = false;
         weLost = true;
         LevelEnded = false;
         LCToggle = KeyCode.Space;
 
+        //Starting Stats
         playerHealth = 50;
         playerDamage = 50;
         playerSpeed = 50;
-
         enemyHealth = 50;
         enemyDamage = 50;
         enemySpeed = 50;
@@ -57,6 +58,7 @@ public class StatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Updates UI text
         player_HP.text = "" + playerHealth;
         player_DP.text = "" + playerDamage;
         player_S.text = "" + playerSpeed;
@@ -64,12 +66,14 @@ public class StatScript : MonoBehaviour
         enemy_DP.text = "" + enemyDamage;
         enemy_S.text = "" + enemySpeed;
 
+        //Use space button to turn LevelEnded true
         if(Input.GetKey(LCToggle))
         {
             LevelEnded = true;
             Debug.Log("Level Completed!");
         }
 
+        //Only calls Stats if level has been completed
         if (LevelEnded == true)
         {
             Debug.Log("Calling Stats Function");
@@ -80,6 +84,7 @@ public class StatScript : MonoBehaviour
 
     void Stats()
     {
+        //player losses even if enemy is also <= 0
         if (playerHealth <= 0)
         {
             Debug.Log("Player Lost: We must now Reset"); 
@@ -90,6 +95,7 @@ public class StatScript : MonoBehaviour
             Reset();
 
         }
+        //need player health up, and enemy health down
         else if (playerHealth > 0 && enemyHealth <= 0)
         {
             Debug.Log("Player Won: We must now Upgrade our stats");
@@ -101,9 +107,8 @@ public class StatScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("No change in stats");
+            //Debug.Log("No change in stats");
         }
-
     }
 
     void Reset()
@@ -118,16 +123,6 @@ public class StatScript : MonoBehaviour
         enemyHealth = 50;
         enemyDamage = 50;
         enemySpeed = 50; ;
-
-        //ammoText.text = currentAmmo + " / " + maxAmmo;
-        //Changes UI Text 
-        /*player_HP.text = "" + playerHealth;
-        player_DP.text = "" + playerDamage;
-        player_S.text = "" + playerSpeed;
-        enemy_HP.text = "" + enemyHealth;
-        enemy_DP.text = "" + enemy_DP;
-        enemy_S.text = "" + enemySpeed;*/
-
     }
 
     void Upgrade()
@@ -142,15 +137,5 @@ public class StatScript : MonoBehaviour
         enemyHealth = 50 + (totalWins * 10);
         enemyDamage = 50 + (totalWins * 10);
         enemySpeed = 50 + (totalWins * 10);
-
-        //ammoText.text = currentAmmo + " / " + maxAmmo;
-        //Changes UI Text 
-        /*player_HP.text = "" + playerHealth;
-        player_DP.text = "" + playerDamage;
-        player_S.text = "" + playerSpeed;
-        enemy_HP.text = "" + enemyHealth;
-        enemy_DP.text = "" + enemy_DP;
-        enemy_S.text = "" + enemySpeed;*/
-
     }
 }
