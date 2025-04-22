@@ -4,7 +4,24 @@ using UnityEngine.SceneManagement;
 
 public class Respawn_Next_lvl : MonoBehaviour
 {
-    
+    void OnCollisionEnter(Collision collision)
+    {
+//It calls on the respawn tag and reloads the level
+        if(collision.gameObject.CompareTag("Player")) 
+        {            
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+
+            if(gameObject == null)
+            {
+                playerHealth.PlayerDeath();
+                PlayAgain();
+            }
+        } 
+        //if(collision.gameObject.CompareTag("Enemy"))
+        {
+            //LoadNextScene();
+        }
+    }
 
     //Loads the next level
     public void LoadNextScene()

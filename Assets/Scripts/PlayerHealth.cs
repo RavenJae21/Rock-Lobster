@@ -8,19 +8,15 @@ public class PlayerHealth : MonoBehaviour
 
     public GameManager gameManager;
 
-    public AudioSource luisHurt;
-
     void Start()
     {
         currentHealth = maxHealth;
-        luisHurt.Stop();
     }
 
     public void PlayerTakeDamage(int amount)
     {
 //Current health will substract from whatever amount ==
         currentHealth -= amount;
-        luisHurt.Play();
 
 //If current health is less or equal to zero call PlayerDeath()
         if(currentHealth <= 0)
