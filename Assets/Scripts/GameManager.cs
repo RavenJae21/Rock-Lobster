@@ -82,4 +82,14 @@ public class GameManager : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ControlsMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
