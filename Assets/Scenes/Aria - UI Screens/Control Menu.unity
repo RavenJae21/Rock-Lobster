@@ -965,8 +965,9 @@ RectTransform:
   - {fileID: 47331772}
   - {fileID: 1836304046}
   - {fileID: 2015262984}
-  - {fileID: 1610451448}
   - {fileID: 523111445}
+  - {fileID: 1610451448}
+  - {fileID: 1763655522}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1470,7 +1471,7 @@ GameObject:
   - component: {fileID: 1610451450}
   - component: {fileID: 1610451449}
   m_Layer: 5
-  m_Name: Arrow Keys (1)
+  m_Name: Left Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1492,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: -184}
+  m_AnchoredPosition: {x: -137, y: -184}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610451449
@@ -1515,7 +1516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ????
+  m_text: Left Click
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1580,7 +1581,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -212.94391, w: 0}
+  m_margin: {x: 0, y: 0, z: -260.60938, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1697,11 +1698,11 @@ Transform:
   m_GameObject: {fileID: 1763655518}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -63.5, y: 40.5, z: 707.7}
-  m_LocalScale: {x: -174.79001, y: -100.00006, z: 92.12504}
+  m_LocalPosition: {x: -816, y: -348, z: 707.7}
+  m_LocalScale: {x: -174.79001, y: -100.00008, z: 92.12502}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 628199228}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1836304045
 GameObject:
@@ -1982,4 +1983,3 @@ SceneRoots:
   - {fileID: 1122991062}
   - {fileID: 220768232}
   - {fileID: 628199228}
-  - {fileID: 1763655522}
