@@ -781,8 +781,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17703162, y: -0.6845873, z: -0.17703159, w: 0.6845874}
-  m_LocalPosition: {x: 18.720001, y: 8.33, z: -24.66}
+  m_LocalRotation: {x: -0.00000007958746, y: 0.9681527, z: 0.2503605, w: 0.00000030776746}
+  m_LocalPosition: {x: 16.277803, y: 8.33, z: -22.217804}
   m_LocalScale: {x: 2.2006557, y: 1.743508, z: 1.743508}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2213,6 +2213,22 @@ PrefabInstance:
     - target: {fileID: 6539910314547204307, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_Name
       value: Luis_Lobster_Pack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000030776746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000007958746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9681527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2503605
       objectReference: {fileID: 0}
     - target: {fileID: 9205718273731794469, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: gameManager

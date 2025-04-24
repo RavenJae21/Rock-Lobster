@@ -45,10 +45,6 @@ public class GameManager : MonoBehaviour
                 loseCanvas.SetActive(true);
 
             }
-            if(playerWin && SceneManager.GetActiveScene().buildIndex == targetScene)
-            {
-                winCanvas.SetActive(true);
-            }
         }
     }
 
@@ -87,16 +83,6 @@ public class GameManager : MonoBehaviour
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
-    }
-
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void ControlsMenu()
-    {
-        SceneManager.LoadScene(1);
     }
     
 
