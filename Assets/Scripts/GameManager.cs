@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //public static GameManager instance;
+    public int targetScene;
 //Assign in Inspector
     public GameObject loseCanvas;
     public GameObject levelUpCanvas;
@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
             {
                 loseCanvas.SetActive(true);
 
+            }
+            if(playerWin && SceneManager.GetActiveScene().buildIndex == targetScene)
+            {
+                winCanvas.SetActive(true);
             }
         }
     }
