@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        MovePlayer();
+        //MovePlayer();
     }
 
 //Player movement for left and right
