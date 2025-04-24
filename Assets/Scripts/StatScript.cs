@@ -70,13 +70,13 @@ public class StatScript : MonoBehaviour
         if(Input.GetKey(LCToggle))
         {
             LevelEnded = true;
-            Debug.Log("Level Completed!");
+            //Debug.Log("Level Completed!");
         }
 
         //Only calls Stats if level has been completed
         if (LevelEnded == true)
         {
-            Debug.Log("Calling Stats Function");
+            //Debug.Log("Calling Stats Function");
             Stats();
             //reset level ended
             LevelEnded = false;
@@ -88,7 +88,7 @@ public class StatScript : MonoBehaviour
         //player losses even if enemy is also <= 0
         if (playerHealth <= 0)
         {
-            Debug.Log("Player Lost: We must now Reset"); 
+            //Debug.Log("Player Lost: We must now Reset"); 
             weLost = true;
             weWon = false;
             totalWins = 0;
@@ -99,7 +99,7 @@ public class StatScript : MonoBehaviour
         //need player health up, and enemy health down
         else if (playerHealth > 0 && enemyHealth <= 0)
         {
-            Debug.Log("Player Won: We must now Upgrade our stats");
+            //Debug.Log("Player Won: We must now Upgrade our stats");
             weWon = true; 
             weLost = false;
             totalWins ++;
@@ -114,7 +114,7 @@ public class StatScript : MonoBehaviour
 
     void Reset()
     {
-        Debug.Log("Reseting Stats...");
+        //Debug.Log("Reseting Stats...");
         //reset player stats
         playerHealth = 50;
         playerDamage = 50;
@@ -128,7 +128,7 @@ public class StatScript : MonoBehaviour
 
     void Upgrade()
     {
-        Debug.Log("Upgrading Stats...");
+        //Debug.Log("Upgrading Stats...");
         //add to player stats
         playerHealth = 50 + (totalWins * 10);
         playerDamage = 50 + (totalWins * 10);

@@ -1896,7 +1896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &153508269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24783,6 +24783,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_S
+      value: 
+      objectReference: {fileID: 2136309911}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_DP
+      value: 
+      objectReference: {fileID: 1485960675}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_HP
+      value: 
+      objectReference: {fileID: 809716133}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: player_S
+      value: 
+      objectReference: {fileID: 1933945296}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: player_DP
+      value: 
+      objectReference: {fileID: 890967005}
+    - target: {fileID: 1188770297860781794, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: player_HP
+      value: 
+      objectReference: {fileID: 512936544}
     - target: {fileID: 1238934044544098298, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: m_Name
       value: Canvas_Things
