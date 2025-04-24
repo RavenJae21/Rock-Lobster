@@ -7,11 +7,13 @@ public class PlayerDamage : MonoBehaviour
     public int attackDamage = 20; // Damage value
 
     public GameObject Punch;
+    public bool holdPunch;
+    public int holdPunchTimer;
+    public bool again;
+    //public bool onePunch;
     public KeyCode Attack = KeyCode.Space;
-
-    public int Timer = 10000;
-    //public int countdown = 2;
-
+    //public int Timer;
+    public int coolDown;
 
 
 
@@ -19,6 +21,11 @@ public class PlayerDamage : MonoBehaviour
     void Start()
     {
         lobsterWalk = GetComponent<Animator>();
+        coolDown = 50000;
+        holdPunch = true;
+        holdPunchTimer = 30000;
+        again = true;
+        Punch.SetActive(false);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -45,29 +52,38 @@ public class PlayerDamage : MonoBehaviour
 
     void Update()
     {
-        Punch.SetActive(false);
-
         if(Input.GetKeyDown(KeyCode.W))
         {
             lobsterWalk.SetTrigger("Walk");
         }
 
-        if (Input.GetKey(Attack))
-        {
-            Punch.SetActive(true);
+        //if player presses attack button
+        if (Input.GetKey(Attack) && again == true)
+        {   
+            //for 1 second punch is active
+            //use holdPunchTimer
+                holdPunchTimer --;
+                Punch.SetActive(true);
 
-            if(Timer>0)
+            if (holdPunchTimer <= 0)
             {
-                Timer -= Timer;
+                //for cooldown time punch is inactive
+                // use coolDown time
+                    Punch.SetActive(false);
+            }
+            else 
+            {
+                Punch.SetActive(true);
+            }
 
-            }
-            else if (Timer <= 0)
-            {
-                Punch.SetActive(false);
-                Timer = 10000;
-            }
+            //everything above might be in a for loop
             
-            //Punch.SetActive(true);
+        }
+        else if (again == false)
+        {
+            //for loop for cool down timer
+            //when timer is done
+            again = true;
 
         }
 
