@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 154831247}
+    - target: {fileID: 5583881277260579988, guid: b52fbfdfcf5d8584a935a9a8f5b3cbf1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5632146042776952917, guid: b52fbfdfcf5d8584a935a9a8f5b3cbf1, type: 3}
       propertyPath: m_Name
       value: Gladiator
