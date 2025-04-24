@@ -6,6 +6,8 @@ public class PlayerDamage : MonoBehaviour
 
     public int attackDamage = 20; // Damage value
 
+     public KeyCode Attack = KeyCode.Space;
+
     void Start()
     {
         lobsterWalk = GetComponent<Animator>();
@@ -38,6 +40,11 @@ public class PlayerDamage : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.W))
         {
             lobsterWalk.SetTrigger("Walk");
+        }
+
+        if (Input.GetKey(Attack))
+        {
+            //make punch appear
         }
     }
 }

@@ -78,6 +78,7 @@ public class StatScript : MonoBehaviour
         {
             Debug.Log("Calling Stats Function");
             Stats();
+            //reset level ended
             LevelEnded = false;
         }
     }
