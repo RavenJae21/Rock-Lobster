@@ -461,6 +461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3775470219221099978}
     m_Modifications:
+    - target: {fileID: 336249820068299534, guid: 650597c79db988943929341ea190e35f, type: 3}
+      propertyPath: m_TagString
+      value: Attack
+      objectReference: {fileID: 0}
     - target: {fileID: 7070631163423751005, guid: 650597c79db988943929341ea190e35f, type: 3}
       propertyPath: m_Name
       value: Luis
@@ -504,6 +508,10 @@ PrefabInstance:
     - target: {fileID: 7589758584013824487, guid: 650597c79db988943929341ea190e35f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969334765430666346, guid: 650597c79db988943929341ea190e35f, type: 3}
+      propertyPath: m_Center.z
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 8918540703331351452, guid: 650597c79db988943929341ea190e35f, type: 3}
       propertyPath: _xRotation
