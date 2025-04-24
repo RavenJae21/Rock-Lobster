@@ -13,6 +13,12 @@ public class PlayerDamage : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+
+        //if attack is pressed(not held) and distance from enemy and player is less than 5 units
+            //player hits enemy 
+        //if enemy attacks in the 5 units and collides with player then 
+            //enemy losses points
+
         // Check if we hit an enemy
         if (collision.gameObject.tag == "Enemy")
         {
