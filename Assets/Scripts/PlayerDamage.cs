@@ -24,7 +24,6 @@ public class PlayerDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("HIT TEST 1!");
             // Get a reference to the enemy's health script
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
 

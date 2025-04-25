@@ -24923,6 +24923,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3292807115710952706, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: _xRotation
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 3775470219221099978, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.494152
@@ -24966,6 +24970,22 @@ PrefabInstance:
     - target: {fileID: 6539910314547204307, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_Name
       value: Luis_Lobster_Things
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000033851705
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000009481522
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9681527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.2503605
       objectReference: {fileID: 0}
     - target: {fileID: 9205718273731794469, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: gameManager
