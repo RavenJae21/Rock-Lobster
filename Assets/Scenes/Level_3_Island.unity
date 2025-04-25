@@ -2222,6 +2222,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 5322768130904289717}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1397829676}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: eDamageScript
+      value: 
+      objectReference: {fileID: 5322768130904289719}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: eHealthScript
+      value: 
+      objectReference: {fileID: 5322768130904289718}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: pDamageScript
+      value: 
+      objectReference: {fileID: 1397829677}
+    - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: pHealthScript
+      value: 
+      objectReference: {fileID: 1397829675}
     - target: {fileID: 7279330134164133811, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
