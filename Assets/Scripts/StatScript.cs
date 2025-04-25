@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StatScript : MonoBehaviour
 {
-    [Header("Connections")]
+    [Header("Stat Connectors")]
     public GameObject Player;
     public GameObject Enemy;
 
@@ -67,9 +67,9 @@ public class StatScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Change the parts after the period "." if you change variable names in other scripts
         playerHealth = pHealthScript.currentHealth;
         playerDamage = pDamageScript.attackDamage;
-
         enemyHealth = eHealthScript.currentHealth;
         enemyDamage = eDamageScript.attackDamage;
 
@@ -114,18 +114,16 @@ public class StatScript : MonoBehaviour
         }
     }
 
+    //reset player and enemy stats
     void Reset()
     {
         LevelEnded = false;
 
-        //Debug.Log("Reseting Stats...");
-        //reset player stats
-        //playerHealth = 50;
+        //playerHealth = 50; //WHAT DOES HEALTH START AT
         playerDamage = 50;
         playerSpeed = 50;
 
-        //reset enemy stats
-        //enemyHealth = 50;
+        //enemyHealth = 50; //WHAT DOES HEALTH START AT
         enemyDamage = 50;
         enemySpeed = 50;
     }
@@ -136,12 +134,12 @@ public class StatScript : MonoBehaviour
 
         //Debug.Log("Upgrading Stats...");
         //add to player stats
-        playerHealth = 50 + (totalWins * 10);
+        playerHealth = 50 + (totalWins * 10); //WHAT DOES HEALTH START AT
         playerDamage = 50 + (totalWins * 10);
         playerSpeed = 50 + (totalWins * 10);
 
         //add to enemy stats
-        enemyHealth = 50 + (totalWins * 10);
+        enemyHealth = 50 + (totalWins * 10); //WHAT DOES HEALTH START AT
         enemyDamage = 50 + (totalWins * 10);
         enemySpeed = 50 + (totalWins * 10);
     }
