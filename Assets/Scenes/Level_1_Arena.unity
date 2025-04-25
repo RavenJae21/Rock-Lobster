@@ -24953,7 +24953,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2788549000059135078, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2867927133323871916, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_IsTrigger
