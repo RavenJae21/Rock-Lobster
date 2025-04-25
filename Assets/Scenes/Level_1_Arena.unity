@@ -17630,6 +17630,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2194953170922201457, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8787701998249742587, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
       propertyPath: gameManager
       value: 
@@ -17639,6 +17643,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+--- !u!114 &1524012543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3122528569881198923, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+  m_PrefabInstance: {fileID: 1524012542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989492855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f36f3fadfbe27e4492ba40730d48ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1524121590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863319645620734, guid: 625ecbc00d4514b38ae82a9deeb5651d, type: 3}
@@ -24824,9 +24839,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 512936544}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: eDamageScript
+      value: 
+      objectReference: {fileID: 1524012543}
+    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: eHealthScript
       value: 
       objectReference: {fileID: 989492859}
+    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: pDamageScript
+      value: 
+      objectReference: {fileID: 5584475529246878199}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: pHealthScript
       value: 
@@ -24949,6 +24972,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+--- !u!114 &5584475529246878199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2788549000059135078, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+  m_PrefabInstance: {fileID: 5584475529246878198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319610514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69038d79e0e888749a6fc3867f55b2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

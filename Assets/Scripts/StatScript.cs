@@ -10,7 +10,9 @@ public class StatScript : MonoBehaviour
     public GameObject Enemy;
 
     public PlayerHealth pHealthScript;
+    public PlayerDamage pDamageScript;
     public EnemyHealth eHealthScript;
+    public EnemyDamage eDamageScript;
 
     
 
@@ -66,7 +68,10 @@ public class StatScript : MonoBehaviour
     void Update()
     {
         playerHealth = pHealthScript.currentHealth;
+        playerDamage = pDamageScript.attackDamage;
+
         enemyHealth = eHealthScript.currentHealth;
+        enemyDamage = eDamageScript.attackDamage;
 
         //Updates UI text
         player_HP.text = "" + playerHealth;
@@ -128,7 +133,7 @@ public class StatScript : MonoBehaviour
     void Upgrade()
     {
         LevelEnded = false;
-        
+
         //Debug.Log("Upgrading Stats...");
         //add to player stats
         playerHealth = 50 + (totalWins * 10);
