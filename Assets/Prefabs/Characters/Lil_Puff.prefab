@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7ac7555bd140e34eb6702fcf2fc8ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.21
+      value: -35.169907
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7ac7555bd140e34eb6702fcf2fc8ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7ac7555bd140e34eb6702fcf2fc8ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.5800931
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7ac7555bd140e34eb6702fcf2fc8ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -109,6 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f36f3fadfbe27e4492ba40730d48ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ePunch: {fileID: 0}
+  holdPunchTimer: 0.15
+  again: 1
+  coolDown: 0.25
+  cooling: 0
   attackDamage: 0
 --- !u!114 &8787701998249742587
 MonoBehaviour:
@@ -124,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 100
+  gameManager: {fileID: 0}
 --- !u!114 &9072115026933000995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,10 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentryMode: 0
   meleeMode: 0
-  detectionRadius: 100
-  stopRadius: 2.36
+  detectionRadius: 500
+  stopRadius: 2
   rotationSpeed: 5
-  moveSpeed: 3
+  moveSpeed: 10
   aimThreshold: 15
   isFacingPlayer: 0
   isPlayerDetected: 0
