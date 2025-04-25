@@ -7,13 +7,12 @@ public class PlayerDamage : MonoBehaviour
     public int attackDamage = 20; // Damage value
 
     public GameObject Punch;
-    public bool noPunch;
-    public int holdPunchTimer;
+    public float holdPunchTimer;
     public bool again;
-    //public bool onePunch;
+    public float coolDown;
+    public bool cooling;
     public KeyCode Attack = KeyCode.Space;
     //public int Timer;
-    public int coolDown;
 
 
 
@@ -21,8 +20,8 @@ public class PlayerDamage : MonoBehaviour
     void Start()
     {
         lobsterWalk = GetComponent<Animator>();
-        coolDown = 50000;
-        noPunch = true;
+        holdPunchTimer = 2f;
+        coolDown = 2f;
         again = true;
         Punch.SetActive(false);
     }
@@ -51,39 +50,40 @@ public class PlayerDamage : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
+        if(Input.GetKey(KeyCode.W))
         {
             lobsterWalk.SetTrigger("Walk");
         }
 
         //if player presses attack button
         if (Input.GetKey(Attack) && again == true)
-        {   
-            holdPunchTimer = 30000;
-            for (int i = 0; i < holdPunchTimer; i++)
-            {
-                Punch.SetActive(true);
-                noPunch = false;
-                again = false;
-
-            }
-
-             //everything above might be in a for loop
-            
-        }
-        else if (again == false)
         {
-            coolDown = 50000;
-            for (int i = 0; i < coolDown; i++)
+            again = false;
+            cooling = false;
+            holdPunchTimer = .25f;
+            coolDown = .15f;
+            Punch.SetActive(true);
+        }
+
+        if (again == false)
+        {
+            holdPunchTimer -= Time.deltaTime;
+            if (holdPunchTimer <= 0)
             {
                 Punch.SetActive(false);
-                noPunch = true;
+                cooling = true;
             }
-            //for loop for cool down timer
-            //when timer is done
-            again = true;
-
         }
+
+        if (cooling == true)
+        {
+            //Punch.SetActive(false);
+            coolDown -= Time.deltaTime;
+            if (coolDown <= 0)
+            {
+                again = true;
+            }
+        }  
 
     }
 }
