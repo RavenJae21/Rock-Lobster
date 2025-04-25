@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
     public int attackDamage = 20; // Damage value
-
+    private Rigidbody rb;
     public GameObject Punch;
     public float holdPunchTimer = .15f;
     public bool again = true;
@@ -17,10 +18,27 @@ public class PlayerDamage : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         holdPunchTimer = 2f;
         coolDown = 2f;
         again = true;
         Punch.SetActive(false);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("HIT TEST 1!");
+            // Get a reference to the enemy's health script
+            EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+
+            // Call the enemy's TakeDamage method
+            if (enemyHealth != null)
+            {
+                enemyHealth.EnemyTakeDamage(attackDamage);
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -32,17 +50,7 @@ public class PlayerDamage : MonoBehaviour
             //enemy losses points
 
         // Check if we hit an enemy
-        if (collision.gameObject.tag == "Enemy")
-        {
-            // Get a reference to the enemy's health script
-            EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
-
-            // Call the enemy's TakeDamage method
-            if (enemyHealth != null)
-            {
-                enemyHealth.EnemyTakeDamage(attackDamage);
-            }
-        }
+        
     }
 
     void Update()

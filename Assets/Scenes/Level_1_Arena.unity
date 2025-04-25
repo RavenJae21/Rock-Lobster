@@ -17630,8 +17630,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2194953170922201457, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 3122528569881198923, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+      propertyPath: cooling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122528569881198923, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118665545874870138, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8787701998249742587, guid: 0296dc4b7ac95d74689d1f7cdfb260ca, type: 3}
@@ -24894,18 +24902,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: enemy_S
-      value: 
-      objectReference: {fileID: 2136309911}
-    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: enemy_DP
-      value: 
-      objectReference: {fileID: 1485960675}
-    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: enemy_HP
-      value: 
-      objectReference: {fileID: 809716133}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24919,6 +24915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2788549000059135078, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: attackDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867927133323871916, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3775470219221099978, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.494152

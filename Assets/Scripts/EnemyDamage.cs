@@ -1,9 +1,10 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
 
-
+    private Rigidbody rb;
     public GameObject ePunch; //the object that is representing the punch
     public float holdPunchTimer = .15f; // how long to hold punch
     public bool again = true; // can the player punch again yet?
@@ -12,13 +13,18 @@ public class EnemyDamage : MonoBehaviour
 
     public int attackDamage = 20; // Damage value
 
-    void OnCollisionEnter(Collision collision)
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         // Check if we hit an enemy
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             // Get a reference to the enemy's health script
-            PlayerHealth enemyHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            PlayerHealth enemyHealth = other.gameObject.GetComponent<PlayerHealth>();
 
             // Call the enemy's TakeDamage method
             if (enemyHealth != null)
@@ -30,7 +36,7 @@ public class EnemyDamage : MonoBehaviour
 
     void Update()
     {
-         EnemyPunching();
+        EnemyPunching();
     }
 
     void EnemyPunching()

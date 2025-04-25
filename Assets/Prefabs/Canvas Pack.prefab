@@ -223,6 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2678952295340834119, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
+    - {fileID: 6553632863768500207, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -512,7 +513,9 @@ MonoBehaviour:
   Player: {fileID: 0}
   Enemy: {fileID: 0}
   pHealthScript: {fileID: 0}
+  pDamageScript: {fileID: 0}
   eHealthScript: {fileID: 0}
+  eDamageScript: {fileID: 0}
   playerHealth: 50
   playerDamage: 50
   playerSpeed: 50
