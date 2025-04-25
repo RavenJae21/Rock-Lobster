@@ -4,7 +4,7 @@ public class LobsterAudio : MonoBehaviour
 {
     public GameObject luis;
 
-    public AudioSource luisHurt;
+    //public AudioSource luisHurt;
     public AudioSource luisWalk;
 
     void Update()

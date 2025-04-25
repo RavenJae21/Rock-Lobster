@@ -2117,6 +2117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Pack
       objectReference: {fileID: 0}
+    - target: {fileID: 2106577246635809765, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7279330134164133811, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2157,6 +2161,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_S
+      value: 
+      objectReference: {fileID: 667049106}
+    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_DP
+      value: 
+      objectReference: {fileID: 709280574}
+    - target: {fileID: 8043990782051900490, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: enemy_HP
+      value: 
+      objectReference: {fileID: 2081626679}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2214,22 +2230,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Luis_Lobster_Pack
       objectReference: {fileID: 0}
-    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.00000030776746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000007958746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9681527
-      objectReference: {fileID: 0}
-    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.2503605
-      objectReference: {fileID: 0}
     - target: {fileID: 9205718273731794469, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: gameManager
       value: 
@@ -2237,45 +2237,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6539910314547204307, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1397829676}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
---- !u!1 &1397829675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6539910314547204307, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
-  m_PrefabInstance: {fileID: 1397829674}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1397829676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397829675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5e8d5dc7a3570c4daa33fdd9c19ae98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 50
-  playerDamage: 50
-  playerSpeed: 50
-  enemyHealth: 50
-  enemyDamage: 50
-  enemySpeed: 50
-  player_HP: {fileID: 1798097759}
-  player_DP: {fileID: 39414136}
-  player_S: {fileID: 160501391}
-  enemy_HP: {fileID: 2081626679}
-  enemy_DP: {fileID: 709280574}
-  enemy_S: {fileID: 667049106}
-  totalWins: 0
-  weWon: 0
-  weLost: 0
-  LevelEnded: 0
-  LCToggle: 32
 --- !u!4 &1503550603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4572163718803828, guid: 6b1ea5982207e483a8b1c7b26424e740, type: 3}

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 //Assign in Inspector
     public GameObject loseCanvas;
     public GameObject levelUpCanvas;
-    public GameObject winCanvas;
+    //public GameObject winCanvas;
 
 //Bool's that will check if true or false
     public bool playerWin = false;
@@ -25,8 +25,7 @@ public class GameManager : MonoBehaviour
 //Want everything to be false since nothing has happened yet
         loseCanvas.SetActive(false);
         levelUpCanvas.SetActive(false);
-        winCanvas.SetActive(false);
-
+        //winCanvas.SetActive(false);
     }
 
     void Update()
@@ -37,7 +36,6 @@ public class GameManager : MonoBehaviour
             if(playerWin)
             {
                 levelUpCanvas.SetActive(true);
-                
             }
 //If statement will check and see if player is dead then show lose canvas
             if(enemyWin)
