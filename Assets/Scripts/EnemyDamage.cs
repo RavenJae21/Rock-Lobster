@@ -10,8 +10,6 @@ public class EnemyDamage : MonoBehaviour
     public float coolDown = .25f; // how long cooldown mode is
     public bool cooling = false; // tells when cooldown mode is happening
 
-
-
     public int attackDamage = 20; // Damage value
 
     void OnCollisionEnter(Collision collision)
@@ -31,6 +29,11 @@ public class EnemyDamage : MonoBehaviour
     }
 
     void Update()
+    {
+         EnemyPunching();
+    }
+
+    void EnemyPunching()
     {
         if (//distance is close enough && 
         again == true)
@@ -61,6 +64,6 @@ public class EnemyDamage : MonoBehaviour
             {
                 again = true; // now that we got through cool down we can punch again
             }
-        }  
+        } 
     }
 }

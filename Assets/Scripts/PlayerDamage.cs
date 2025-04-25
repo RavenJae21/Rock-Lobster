@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
-    public Animator lobsterWalk;
-
     public int attackDamage = 20; // Damage value
 
     public GameObject Punch;
@@ -19,7 +17,6 @@ public class PlayerDamage : MonoBehaviour
 
     void Start()
     {
-        lobsterWalk = GetComponent<Animator>();
         holdPunchTimer = 2f;
         coolDown = 2f;
         again = true;
@@ -50,11 +47,11 @@ public class PlayerDamage : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
-        {
-            lobsterWalk.SetTrigger("Walk");
-        }
+        PlayerPunching();  
+    }
 
+    void PlayerPunching()
+    {
         //if player presses attack button
         if (Input.GetKey(Attack) && again == true)
         {
@@ -82,7 +79,6 @@ public class PlayerDamage : MonoBehaviour
             {
                 again = true;
             }
-        }  
-
+        }
     }
 }
