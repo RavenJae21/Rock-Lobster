@@ -17,6 +17,7 @@ public class StatScript : MonoBehaviour
     
 
     [Header("Player Stats")]
+    public int startHealth;
     public int playerHealth;
     public int playerDamage;
     public int playerSpeed;
@@ -60,17 +61,19 @@ public class StatScript : MonoBehaviour
         LCToggle = KeyCode.Space;
 
         //Starting Stats
-        //playerHealth = 50;
-        playerDamage = 50;
+        playerHealth = 100;
+        //playerDamage = 20;
         playerSpeed = 50;
         //enemyHealth = 50;
-        enemyDamage = 50;
+        //enemyDamage = 50;
         enemySpeed = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
+        startHealth = pHealthScript.startHealth;
+
         //Change the parts after the period "." if you change variable names in other scripts
         playerHealth = pHealthScript.currentHealth;
         playerDamage = pDamageScript.attackDamage;
@@ -109,7 +112,7 @@ public class StatScript : MonoBehaviour
             //Debug.Log("Player Won: We must now Upgrade our stats");
             weWon = true; 
             weLost = false;
-            totalWins ++;
+            //totalWins ++; ///FIX KEEPS GOING
             Upgrade();
         }
         else
@@ -123,13 +126,13 @@ public class StatScript : MonoBehaviour
     {
         LevelEnded = false;
 
-        //playerHealth = 50; //WHAT DOES HEALTH START AT
-        playerDamage = 50;
-        playerSpeed = 50;
+        startHealth = 100;
+        //playerDamage = 20;
+        //playerSpeed = 50;
 
-        //enemyHealth = 50; //WHAT DOES HEALTH START AT
-        enemyDamage = 50;
-        enemySpeed = 50;
+        //start = 100;
+        //enemyDamage = ;
+        //enemySpeed = 50;
     }
 
     void Upgrade()
@@ -138,18 +141,18 @@ public class StatScript : MonoBehaviour
 
         //Debug.Log("Upgrading Stats...");
         //add to player stats
-        playerHealth = 100 + (totalWins * 10); //WHAT DOES HEALTH START AT
-        playerDamage = 100 + (totalWins * 10);
-        playerSpeed = 100 + (totalWins * 10);
+        playerHealth = startHealth + 10;
+        //playerDamage = 20;
+        //playerSpeed = 100;
 
         newHP.text = "" + playerHealth;
         newDP.text = "" + playerDamage;
         newS.text = "" + playerSpeed;
 
         //add to enemy stats
-        enemyHealth = 100 + (totalWins * 10); //WHAT DOES HEALTH START AT
-        enemyDamage = 100 + (totalWins * 10);
-        enemySpeed = 100 + (totalWins * 10);
+        enemyHealth = startHealth + 10;
+        //enemyDamage = 20;
+        //enemySpeed = 100;
 
     }
 }

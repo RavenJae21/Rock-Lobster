@@ -3,14 +3,19 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 //Determines what the max and current health will be(edit in inspector)
-    public int currentHealth;
+    
     public int maxHealth = 100;
 
     public GameManager gameManager;
 
+
+
+    public int startHealth = 100;
+    public int currentHealth;
+
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = startHealth;
     }
 
     public void PlayerTakeDamage(int amount)
