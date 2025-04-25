@@ -471,7 +471,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3011488470153944318, guid: d43af7291db46384e9346ef6bc4f8dad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512652559845733596}
   m_SourcePrefab: {fileID: 100100000, guid: d43af7291db46384e9346ef6bc4f8dad, type: 3}
 --- !u!4 &4339551943307576508 stripped
 Transform:
@@ -483,9 +486,47 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1246346916945167633, guid: d43af7291db46384e9346ef6bc4f8dad, type: 3}
   m_PrefabInstance: {fileID: 6028819154900699367}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8818153462754219033}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72a5aff4a978ca64aa5cd6e874779bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8818153462754219033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3011488470153944318, guid: d43af7291db46384e9346ef6bc4f8dad, type: 3}
+  m_PrefabInstance: {fileID: 6028819154900699367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512652559845733596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8818153462754219033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e8d5dc7a3570c4daa33fdd9c19ae98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  Enemy: {fileID: 0}
+  pHealthScript: {fileID: 0}
+  eHealthScript: {fileID: 0}
+  playerHealth: 50
+  playerDamage: 50
+  playerSpeed: 50
+  enemyHealth: 50
+  enemyDamage: 50
+  enemySpeed: 50
+  player_HP: {fileID: 0}
+  player_DP: {fileID: 0}
+  player_S: {fileID: 0}
+  enemy_HP: {fileID: 0}
+  enemy_DP: {fileID: 0}
+  enemy_S: {fileID: 0}
+  totalWins: 0
+  weWon: 0
+  weLost: 0
+  LevelEnded: 0
+  LCToggle: 32

@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class StatScript : MonoBehaviour
 {
+    [Header("Connections")]
+    public GameObject Player;
+    public GameObject Enemy;
+
+    public PlayerHealth pHealthScript;
+    public EnemyHealth eHealthScript;
+
+    
+
     [Header("Player Stats")]
     public int playerHealth;
     public int playerDamage;
@@ -45,19 +54,20 @@ public class StatScript : MonoBehaviour
         LCToggle = KeyCode.Space;
 
         //Starting Stats
-        playerHealth = 50;
+        //playerHealth = 50;
         playerDamage = 50;
         playerSpeed = 50;
-        enemyHealth = 50;
+        //enemyHealth = 50;
         enemyDamage = 50;
         enemySpeed = 50;
-
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerHealth = pHealthScript.currentHealth;
+        enemyHealth = eHealthScript.currentHealth;
+
         //Updates UI text
         player_HP.text = "" + playerHealth;
         player_DP.text = "" + playerDamage;
@@ -66,21 +76,8 @@ public class StatScript : MonoBehaviour
         enemy_DP.text = "" + enemyDamage;
         enemy_S.text = "" + enemySpeed;
 
-        //Use space button to turn LevelEnded true
-        if(Input.GetKey(LCToggle))
-        {
-            LevelEnded = true;
-            //Debug.Log("Level Completed!");
-        }
+       Stats();
 
-        //Only calls Stats if level has been completed
-        if (LevelEnded == true)
-        {
-            //Debug.Log("Calling Stats Function");
-            Stats();
-            //reset level ended
-            LevelEnded = false;
-        }
     }
 
     void Stats()
@@ -88,22 +85,22 @@ public class StatScript : MonoBehaviour
         //player losses even if enemy is also <= 0
         if (playerHealth <= 0)
         {
+            LevelEnded = true;
             //Debug.Log("Player Lost: We must now Reset"); 
             weLost = true;
             weWon = false;
             totalWins = 0;
-            LevelEnded = false;
             Reset();
 
         }
         //need player health up, and enemy health down
         else if (playerHealth > 0 && enemyHealth <= 0)
         {
+            LevelEnded = true;
             //Debug.Log("Player Won: We must now Upgrade our stats");
             weWon = true; 
             weLost = false;
             totalWins ++;
-            LevelEnded = false;
             Upgrade();
         }
         else
@@ -114,20 +111,24 @@ public class StatScript : MonoBehaviour
 
     void Reset()
     {
+        LevelEnded = false;
+
         //Debug.Log("Reseting Stats...");
         //reset player stats
-        playerHealth = 50;
+        //playerHealth = 50;
         playerDamage = 50;
         playerSpeed = 50;
 
         //reset enemy stats
-        enemyHealth = 50;
+        //enemyHealth = 50;
         enemyDamage = 50;
-        enemySpeed = 50; ;
+        enemySpeed = 50;
     }
 
     void Upgrade()
     {
+        LevelEnded = false;
+        
         //Debug.Log("Upgrading Stats...");
         //add to player stats
         playerHealth = 50 + (totalWins * 10);
