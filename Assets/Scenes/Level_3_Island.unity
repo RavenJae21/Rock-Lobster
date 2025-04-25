@@ -4742,12 +4742,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1041181443295402070, guid: 197d7d1bd7874ce44b18e6edcb0a9dd6, type: 3}
+      propertyPath: maxHealth
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041181443295402070, guid: 197d7d1bd7874ce44b18e6edcb0a9dd6, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1368968665}
     - target: {fileID: 1532511744558817756, guid: 197d7d1bd7874ce44b18e6edcb0a9dd6, type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1722458916275679331, guid: 197d7d1bd7874ce44b18e6edcb0a9dd6, type: 3}
       propertyPath: m_LocalPosition.x

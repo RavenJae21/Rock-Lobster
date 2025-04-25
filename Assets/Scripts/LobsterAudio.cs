@@ -6,6 +6,7 @@ public class LobsterAudio : MonoBehaviour
 
     //public AudioSource luisHurt;
     public AudioSource luisWalk;
+    public AudioSource luisPunch;
 
     void Update()
     {
@@ -27,6 +28,23 @@ public class LobsterAudio : MonoBehaviour
             if(luisWalk.isPlaying)
             {
                 luisWalk.Stop();
+            }
+        }
+
+        bool isAttacking = Input.GetKey(KeyCode.Mouse0);
+
+        if(isAttacking)
+        {
+            if(!luisPunch.isPlaying)
+            {
+                luisPunch.Play();
+            }
+        }
+        else
+        {
+            if(luisPunch.isPlaying)
+            {
+                luisPunch.Stop();
             }
         }
     }

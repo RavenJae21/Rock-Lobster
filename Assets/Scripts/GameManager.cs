@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject levelUpCanvas;
     //public GameObject winCanvas;
 
+    public AudioSource buttonClick;
+
 //Bool's that will check if true or false
     public bool playerWin = false;
     public bool enemyWin = false;
@@ -74,6 +76,8 @@ public class GameManager : MonoBehaviour
             }
             
         SceneManager.LoadScene(nextScene);
+
+        buttonClick.Play();
     }
 
 //Reloads the level
@@ -81,11 +85,15 @@ public class GameManager : MonoBehaviour
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
+
+        buttonClick.Play();
     }
     
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+
+        buttonClick.Play();
     }
 
 
