@@ -7,10 +7,10 @@ public class PlayerDamage : MonoBehaviour
     public int attackDamage = 20; // Damage value
 
     public GameObject Punch;
-    public float holdPunchTimer;
-    public bool again;
-    public float coolDown;
-    public bool cooling;
+    public float holdPunchTimer = .15f;
+    public bool again = true;
+    public float coolDown = .25f;
+    public bool cooling = false;
     public KeyCode Attack = KeyCode.Space;
     //public int Timer;
 
@@ -77,7 +77,6 @@ public class PlayerDamage : MonoBehaviour
 
         if (cooling == true)
         {
-            //Punch.SetActive(false);
             coolDown -= Time.deltaTime;
             if (coolDown <= 0)
             {
