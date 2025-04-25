@@ -83,6 +83,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
     
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 
 
