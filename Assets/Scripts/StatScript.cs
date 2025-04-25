@@ -34,6 +34,10 @@ public class StatScript : MonoBehaviour
     public TextMeshProUGUI enemy_HP;
     public TextMeshProUGUI enemy_DP;
     public TextMeshProUGUI enemy_S;
+    public TextMeshProUGUI newHP;
+    public TextMeshProUGUI newDP;
+    public TextMeshProUGUI newS;
+    
     
 
 
@@ -134,13 +138,18 @@ public class StatScript : MonoBehaviour
 
         //Debug.Log("Upgrading Stats...");
         //add to player stats
-        playerHealth = 50 + (totalWins * 10); //WHAT DOES HEALTH START AT
-        playerDamage = 50 + (totalWins * 10);
-        playerSpeed = 50 + (totalWins * 10);
+        playerHealth = 100 + (totalWins * 10); //WHAT DOES HEALTH START AT
+        playerDamage = 100 + (totalWins * 10);
+        playerSpeed = 100 + (totalWins * 10);
+
+        newHP.text = "" + playerHealth;
+        newDP.text = "" + playerDamage;
+        newS.text = "" + playerSpeed;
 
         //add to enemy stats
-        enemyHealth = 50 + (totalWins * 10); //WHAT DOES HEALTH START AT
-        enemyDamage = 50 + (totalWins * 10);
-        enemySpeed = 50 + (totalWins * 10);
+        enemyHealth = 100 + (totalWins * 10); //WHAT DOES HEALTH START AT
+        enemyDamage = 100 + (totalWins * 10);
+        enemySpeed = 100 + (totalWins * 10);
+
     }
 }
