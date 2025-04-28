@@ -297,6 +297,7 @@ MonoBehaviour:
   pDamageScript: {fileID: 0}
   eHealthScript: {fileID: 0}
   eDamageScript: {fileID: 0}
+  startHealth: 0
   playerHealth: 0
   playerDamage: 50
   playerSpeed: 50
@@ -595,6 +596,7 @@ MonoBehaviour:
   pDamageScript: {fileID: 0}
   eHealthScript: {fileID: 0}
   eDamageScript: {fileID: 0}
+  startHealth: 0
   playerHealth: 50
   playerDamage: 50
   playerSpeed: 50

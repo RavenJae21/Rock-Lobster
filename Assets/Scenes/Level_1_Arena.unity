@@ -25272,18 +25272,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 243033735777541835, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1238934044544098298, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: m_Name
       value: Canvas_Things
       objectReference: {fileID: 0}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: newS
+      value: 
+      objectReference: {fileID: 1933945296}
+    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 989492855}
+    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: newDP
+      value: 
+      objectReference: {fileID: 890967005}
+    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: newHP
+      value: 
+      objectReference: {fileID: 512936544}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: Player
       value: 
@@ -25328,10 +25336,10 @@ PrefabInstance:
       propertyPath: pHealthScript
       value: 
       objectReference: {fileID: 1319610520}
-    - target: {fileID: 2106577246635809765, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4819206737863560694, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
+      propertyPath: buttonClick
+      value: 
+      objectReference: {fileID: 2016041944}
     - target: {fileID: 7230177173953837791, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: Enemy
       value: 
@@ -25476,6 +25484,22 @@ PrefabInstance:
     - target: {fileID: 6539910314547204307, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: m_Name
       value: Luis_Lobster_Things
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000033851705
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000009481522
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9681527
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372333208802799901, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.2503605
       objectReference: {fileID: 0}
     - target: {fileID: 9205718273731794469, guid: 4506b253b6eb11d4db8f66391a5f4620, type: 3}
       propertyPath: gameManager
