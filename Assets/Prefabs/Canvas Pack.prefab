@@ -224,7 +224,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2678952295340834119, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
     - {fileID: 6553632863768500207, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3525774400862337319, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6268383161413078455, guid: 9b45c8e992f004e4ca4d53aad2612b41, type: 3}
@@ -310,9 +311,6 @@ MonoBehaviour:
   enemy_HP: {fileID: 0}
   enemy_DP: {fileID: 0}
   enemy_S: {fileID: 0}
-  newHP: {fileID: 3899077522572357781}
-  newDP: {fileID: 6457194415611487956}
-  newS: {fileID: 3757023450453861261}
   totalWins: 0
   weWon: 0
   weLost: 0
@@ -471,7 +469,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7858435490199958425, guid: 27479be7022cf4f43bb96a02244b20dd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27479be7022cf4f43bb96a02244b20dd, type: 3}
@@ -609,9 +608,6 @@ MonoBehaviour:
   enemy_HP: {fileID: 0}
   enemy_DP: {fileID: 0}
   enemy_S: {fileID: 0}
-  newHP: {fileID: 0}
-  newDP: {fileID: 0}
-  newS: {fileID: 0}
   totalWins: 0
   weWon: 0
   weLost: 0

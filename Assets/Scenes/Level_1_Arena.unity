@@ -25277,21 +25277,9 @@ PrefabInstance:
       value: Canvas_Things
       objectReference: {fileID: 0}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: newS
-      value: 
-      objectReference: {fileID: 1933945296}
-    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 989492855}
-    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: newDP
-      value: 
-      objectReference: {fileID: 890967005}
-    - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
-      propertyPath: newHP
-      value: 
-      objectReference: {fileID: 512936544}
     - target: {fileID: 1512652559845733596, guid: f7853b8d5e0c3304ab8808d48b3b456a, type: 3}
       propertyPath: Player
       value: 
