@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ThirdPersonMovementCamera : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float cameraSensitivity = 2f; //For camera rotation
+    //public float moveSpeed = 5f;
+    //public float cameraSensitivity = 2f; //For camera rotation
 
-    private CharacterController characterController;
-    private Transform cameraTransform;
+    //private CharacterController characterController;
+    //private Transform cameraTransform;
 
-    void Start()
+    /*void Start()
     {
         characterController = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
@@ -40,5 +40,5 @@ public class ThirdPersonMovementCamera : MonoBehaviour
         // Apply movement
         moveDirection *= moveSpeed;
         characterController.Move(moveDirection * Time.deltaTime);
-    }
+    }*/
 }

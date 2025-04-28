@@ -35,9 +35,9 @@ public class StatScript : MonoBehaviour
     public TextMeshProUGUI enemy_HP;
     public TextMeshProUGUI enemy_DP;
     public TextMeshProUGUI enemy_S;
-    public TextMeshProUGUI newHP;
+    /*public TextMeshProUGUI newHP;
     public TextMeshProUGUI newDP;
-    public TextMeshProUGUI newS;
+    public TextMeshProUGUI newS;*/
     
     
 
@@ -113,7 +113,7 @@ public class StatScript : MonoBehaviour
             weWon = true; 
             weLost = false;
             //totalWins ++; ///FIX KEEPS GOING
-            Upgrade();
+            //Upgrade();
         }
         else
         {
@@ -135,7 +135,7 @@ public class StatScript : MonoBehaviour
         //enemySpeed = 50;
     }
 
-    void Upgrade()
+    /*void Upgrade()
     {
         LevelEnded = false;
 
@@ -154,5 +154,5 @@ public class StatScript : MonoBehaviour
         //enemyDamage = 20;
         //enemySpeed = 100;
 
-    }
+    }*/
 }
