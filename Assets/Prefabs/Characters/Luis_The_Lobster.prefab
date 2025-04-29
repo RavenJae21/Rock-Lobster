@@ -206,9 +206,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e7d3c2204c9ee6499033b350c64d58d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8126052486540864248}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e7d3c2204c9ee6499033b350c64d58d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9044419824631424369}
   m_SourcePrefab: {fileID: 100100000, guid: 6e7d3c2204c9ee6499033b350c64d58d, type: 3}
 --- !u!1 &7070631163423751005 stripped
 GameObject:
@@ -229,6 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   forceStrength: 1
+  mouseSensitivityX: 2
+  mouseSensitivityY: 2
+  _xRotation: 0
 --- !u!114 &3005630323210983611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,9 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff2dc2ea76f4543b97888fc8930921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
   maxHealth: 100
   gameManager: {fileID: 0}
+  startHealth: 100
+  currentHealth: 0
 --- !u!65 &7969334765430666346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -304,33 +305,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69038d79e0e888749a6fc3867f55b2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobsterWalk: {fileID: 9044419824631424369}
   attackDamage: 100
   Punch: {fileID: 336249820068299534}
-  Attack: 32
-  Timer: 2000
---- !u!95 &9044419824631424369
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7070631163423751005}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37a0a315a52163947bafa52484d7c270, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  holdPunchTimer: 0.15
+  again: 1
+  coolDown: 0.25
+  cooling: 0
 --- !u!4 &7589758584013824487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e7d3c2204c9ee6499033b350c64d58d, type: 3}

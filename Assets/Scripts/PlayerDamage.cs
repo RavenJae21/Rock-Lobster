@@ -10,11 +10,6 @@ public class PlayerDamage : MonoBehaviour
     public bool again = true;
     public float coolDown = .25f;
     public bool cooling = false;
-    public KeyCode Attack = KeyCode.Space;
-    //public int Timer;
-
-
-
 
     void Start()
     {
@@ -29,7 +24,6 @@ public class PlayerDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("HIT TEST 1!");
             // Get a reference to the enemy's health script
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
 
@@ -61,7 +55,7 @@ public class PlayerDamage : MonoBehaviour
     void PlayerPunching()
     {
         //if player presses attack button
-        if (Input.GetKey(Attack) && again == true)
+        if (Input.GetMouseButtonDown(0) && again == true)
         {
             again = false;
             cooling = false;

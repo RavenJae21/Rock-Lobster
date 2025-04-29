@@ -1,4 +1,4 @@
-using UnityEditor.Callbacks;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
@@ -30,6 +30,7 @@ public class EnemyDamage : MonoBehaviour
             if (enemyHealth != null)
             {
                 enemyHealth.PlayerTakeDamage(attackDamage);
+
             }
         }
     }
